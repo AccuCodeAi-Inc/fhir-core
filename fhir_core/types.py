@@ -759,7 +759,7 @@ class Date:
                     )
                 if "T" not in input_value and validated_value.time():
                     # a datetime without time MUST NOT have a time component
-                    validated_value = validated_value.date().isoformat()
+                    validated_value = validated_value.date()
             return validated_value
 
         return core_schema.with_info_wrap_validator_function(
